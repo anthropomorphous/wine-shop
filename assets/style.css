@@ -1,0 +1,32 @@
+body{
+    background-color: #FF252525;
+    background-image: url(wineguy-1.jpg);
+    color: #fff;
+    font-family: system-ui;
+}
+
+p.a {
+  font-family: sans-serif, monospace, cursive и fantasy.
+}
+
+p.b {
+  font-family: serif, sans-serif, monospace, cursive и fantasy.
+}
+
+body*{
+    font-family: system-ui;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.carousel-item{
+   height: 94vh;
+}
+
+.card{
+    background-color: #FF262326;
+}
+

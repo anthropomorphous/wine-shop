@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+<div id="main" class="product-list">
+    <link rel="stylesheet" href="/static/style.css">
+    <div class=container>
+        <div class="card">
+            <div class="card-header">
+                <h4>"In vino veritas"</h4>
+            </div>
+        </div>
+        <h1>{%if product %}{{product.name }}{% else %}Wines{%endif%}</h1>
+        <div class="row">
+            {% for product in products %}
+            <div class="col">
+                <div class="card text-white border-dark bg-dark mb-3 d-block"
+                     style="color:brown; width: 18rem; height: 41rem;">
+                    <a href="{{product.get_absolute_url }}">
+                        <img src="{{ product.image_url }}" class="card-img">
+                    </a>
+
+                    <div class="card-body text-white">
+                        <h5><a href="{{ product.name.get_absolute_url }}">{{ product.name }}</a></h5>
+                        <p class="card-text">
+                            ${{ product.price }}
+                        </p>
+
+                        <div class="rating">
+                            <!--<a href="#" class="btn btn-outline-secondary active">Add to Cart</a> -->
+                            <p class="card-text">
+                                {{ product.description }}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %}
